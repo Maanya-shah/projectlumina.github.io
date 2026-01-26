@@ -6,3 +6,6 @@ export { EventCoordination } from "./EventCoordination";
 export { TasksAlerts } from "./TasksAlerts";
 export { Announcements } from "./Announcements";
 export { HoursLogging } from "./HoursLogging";
+export { VolunteerSchedule } from "./VolunteerSchedule";
+export { BudgetTracking } from "./BudgetTracking";
+export { Reports } from "./Reports";

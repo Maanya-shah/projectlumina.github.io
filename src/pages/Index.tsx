@@ -7,6 +7,9 @@ import {
   TasksAlerts,
   Announcements,
   HoursLogging,
+  VolunteerSchedule,
+  BudgetTracking,
+  Reports,
 } from "@/components/dashboard";
 import type { TabType } from "@/components/dashboard/DashboardHeader";
 
@@ -73,26 +76,11 @@ const Index = () => {
           </>
         )}
 
-        {activeTab === "schedule" && (
-          <div className="dashboard-section animate-fade-in p-8 text-center">
-            <h2 className="text-xl font-semibold text-foreground mb-2">Volunteer Schedule</h2>
-            <p className="text-muted-foreground">Schedule management coming soon...</p>
-          </div>
-        )}
+        {activeTab === "schedule" && <VolunteerSchedule />}
 
-        {activeTab === "budget" && (
-          <div className="dashboard-section animate-fade-in p-8 text-center">
-            <h2 className="text-xl font-semibold text-foreground mb-2">Budget Tracking</h2>
-            <p className="text-muted-foreground">Budget tracking coming soon...</p>
-          </div>
-        )}
+        {activeTab === "budget" && <BudgetTracking />}
 
-        {activeTab === "reports" && (
-          <div className="dashboard-section animate-fade-in p-8 text-center">
-            <h2 className="text-xl font-semibold text-foreground mb-2">Reports</h2>
-            <p className="text-muted-foreground">Reports coming soon...</p>
-          </div>
-        )}
+        {activeTab === "reports" && <Reports />}
       </main>
 
       {/* Footer */}
