@@ -2,14 +2,21 @@ import { Bell, HelpCircle, User, Menu } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 
-const navItems = [
-  { label: "Overview", href: "#", active: true },
-  { label: "Volunteer Schedule", href: "#" },
-  { label: "Budget Tracking", href: "#" },
-  { label: "Reports", href: "#" },
+export type TabType = "overview" | "schedule" | "budget" | "reports";
+
+const navItems: { label: string; id: TabType }[] = [
+  { label: "Overview", id: "overview" },
+  { label: "Volunteer Schedule", id: "schedule" },
+  { label: "Budget Tracking", id: "budget" },
+  { label: "Reports", id: "reports" },
 ];
 
-export function DashboardHeader() {
+interface DashboardHeaderProps {
+  activeTab: TabType;
+  onTabChange: (tab: TabType) => void;
+}
+
+export function DashboardHeader({ activeTab, onTabChange }: DashboardHeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -31,16 +38,16 @@ export function DashboardHeader() {
           {/* Desktop Nav */}
           <nav className="hidden lg:flex lg:items-center lg:gap-1">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
+              <button
+                key={item.id}
+                onClick={() => onTabChange(item.id)}
                 className={cn(
                   "nav-link rounded-md",
-                  item.active && "nav-link-active"
+                  activeTab === item.id && "nav-link-active"
                 )}
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -75,16 +82,19 @@ export function DashboardHeader() {
         {mobileMenuOpen && (
           <nav className="border-t border-white/10 px-4 py-2 lg:hidden">
             {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
+              <button
+                key={item.id}
+                onClick={() => {
+                  onTabChange(item.id);
+                  setMobileMenuOpen(false);
+                }}
                 className={cn(
-                  "block rounded-md px-3 py-2 text-sm font-medium text-primary-foreground/80 transition-colors hover:bg-white/10 hover:text-primary-foreground",
-                  item.active && "bg-white/10 text-primary-foreground"
+                  "block w-full text-left rounded-md px-3 py-2 text-sm font-medium text-primary-foreground/80 transition-colors hover:bg-white/10 hover:text-primary-foreground",
+                  activeTab === item.id && "bg-white/10 text-primary-foreground"
                 )}
               >
                 {item.label}
-              </a>
+              </button>
             ))}
           </nav>
         )}
