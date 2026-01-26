@@ -16,7 +16,7 @@ const mockEvents: Event[] = [
   {
     id: "1",
     name: "Memory Care Support Group",
-    date: "2025-03-08",
+    date: "2025-02-15",
     time: "1:00 PM - 3:00 PM",
     location: "Mississauga",
     volunteersAssigned: 10,
