@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   DashboardHeader,
   MetricsCards,
@@ -7,12 +8,15 @@ import {
   Announcements,
   HoursLogging,
 } from "@/components/dashboard";
+import type { TabType } from "@/components/dashboard/DashboardHeader";
 
 const Index = () => {
+  const [activeTab, setActiveTab] = useState<TabType>("overview");
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <DashboardHeader />
+      <DashboardHeader activeTab={activeTab} onTabChange={setActiveTab} />
 
       {/* Page Title */}
       <div className="border-b border-border bg-card">
@@ -40,30 +44,55 @@ const Index = () => {
 
       {/* Main Content */}
       <main className="mx-auto max-w-7xl px-4 py-6 lg:px-6">
-        {/* Metrics Cards */}
-        <section className="mb-6">
-          <MetricsCards />
-        </section>
+        {activeTab === "overview" && (
+          <>
+            {/* Metrics Cards */}
+            <section className="mb-6">
+              <MetricsCards />
+            </section>
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-          {/* Left Column - Volunteer Directory */}
-          <div className="lg:col-span-1">
-            <VolunteerDirectory />
-          </div>
+            {/* Main Grid */}
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+              {/* Left Column - Volunteer Directory */}
+              <div className="lg:col-span-1">
+                <VolunteerDirectory />
+              </div>
 
-          {/* Middle Column - Events & Hours */}
-          <div className="space-y-6 lg:col-span-1">
-            <EventCoordination />
-            <HoursLogging />
-          </div>
+              {/* Middle Column - Events & Hours */}
+              <div className="space-y-6 lg:col-span-1">
+                <EventCoordination />
+                <HoursLogging />
+              </div>
 
-          {/* Right Column - Tasks, Alerts & Announcements */}
-          <div className="space-y-6 lg:col-span-1">
-            <TasksAlerts />
-            <Announcements />
+              {/* Right Column - Tasks, Alerts & Announcements */}
+              <div className="space-y-6 lg:col-span-1">
+                <TasksAlerts />
+                <Announcements />
+              </div>
+            </div>
+          </>
+        )}
+
+        {activeTab === "schedule" && (
+          <div className="dashboard-section animate-fade-in p-8 text-center">
+            <h2 className="text-xl font-semibold text-foreground mb-2">Volunteer Schedule</h2>
+            <p className="text-muted-foreground">Schedule management coming soon...</p>
           </div>
-        </div>
+        )}
+
+        {activeTab === "budget" && (
+          <div className="dashboard-section animate-fade-in p-8 text-center">
+            <h2 className="text-xl font-semibold text-foreground mb-2">Budget Tracking</h2>
+            <p className="text-muted-foreground">Budget tracking coming soon...</p>
+          </div>
+        )}
+
+        {activeTab === "reports" && (
+          <div className="dashboard-section animate-fade-in p-8 text-center">
+            <h2 className="text-xl font-semibold text-foreground mb-2">Reports</h2>
+            <p className="text-muted-foreground">Reports coming soon...</p>
+          </div>
+        )}
       </main>
 
       {/* Footer */}

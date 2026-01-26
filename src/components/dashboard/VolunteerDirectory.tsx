@@ -61,13 +61,13 @@ export function VolunteerDirectory() {
         </div>
 
         <div className="overflow-x-auto">
-          <table className="w-full">
+          <table className="w-full table-fixed">
             <thead>
               <tr className="border-b border-border text-left text-sm text-muted-foreground">
-                <th className="pb-3 font-medium">Name</th>
-                <th className="pb-3 font-medium">Email</th>
-                <th className="hidden pb-3 font-medium sm:table-cell">Joined</th>
-                <th className="pb-3 text-right font-medium">Hours</th>
+                <th className="pb-3 font-medium w-[30%]">Name</th>
+                <th className="pb-3 font-medium w-[35%]">Email</th>
+                <th className="hidden pb-3 font-medium sm:table-cell text-center w-[20%]">Joined</th>
+                <th className="pb-3 text-right font-medium w-[15%]">Hours</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border">
@@ -85,10 +85,10 @@ export function VolunteerDirectory() {
                       <span className="font-medium text-foreground">{volunteer.name}</span>
                     </div>
                   </td>
-                  <td className="py-3 text-sm text-muted-foreground">
+                  <td className="py-3 text-sm text-muted-foreground truncate">
                     {volunteer.email}
                   </td>
-                  <td className="hidden py-3 text-sm text-muted-foreground sm:table-cell">
+                  <td className="hidden py-3 text-sm text-muted-foreground sm:table-cell text-center">
                     {new Date(volunteer.joinedDate).toLocaleDateString("en-US", {
                       month: "short",
                       day: "numeric",
