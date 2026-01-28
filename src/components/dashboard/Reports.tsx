@@ -222,7 +222,7 @@ export function Reports() {
                 <td className="py-3 text-right text-foreground">70</td>
                 <td className="py-3 text-right text-foreground">1</td>
                 <td className="py-3 text-right text-foreground">18</td>
-                <td className="py-3 text-right text-foreground">850</td>
+                <td className="py-3 text-right text-foreground">250</td>
                 <td className="py-3 text-right text-success font-medium">...</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
