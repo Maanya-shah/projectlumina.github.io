@@ -12,17 +12,16 @@ const budgetTabs: { id: BudgetTab; label: string }[] = [
 ];
 
 const financialAccounts = [
-  { label: "Event Budget Balance", amount: 1249.0, color: "text-info" },
-  { label: "Grants Received", amount: 1115.0, color: "text-info" },
+  { label: "Event Budget Balance", amount: 1120.0, color: "text-info" },
+  { label: "Grants Received", amount: 3000.0, color: "text-info" },
   { label: "Donations & Sponsorships", amount: 772.0, color: "text-info" },
-  { label: "Total Funds Available", amount: 3136.0, color: "text-info font-bold" },
+  { label: "Total Funds Available", amount: 2723.0, color: "text-info font-bold" },
 ];
 
 const budgetAllocation = [
-  { category: "Event Supplies", projected: 2000.0, actual: 1751.0, variance: 249.0 },
-  { category: "Marketing Materials", projected: 500.0, actual: 385.0, variance: 115.0 },
-  { category: "Venue Rentals", projected: 800.0, actual: 650.0, variance: 150.0 },
-  { category: "Transportation", projected: 300.0, actual: 275.0, variance: 25.0 },
+  { category: "Event Supplies", projected: 720.0, actual: 162.0, variance: 558.0 },
+  { category: "Marketing Materials", projected: 100.0, actual: 45.50, variance: 55.0 },
+  { category: "Dashboard Costs", projected: 400.0, actual: 0.0, variance: 400.0 },
 ];
 
 const recentSponsors = [
@@ -41,17 +40,16 @@ const inKindDonations = [
 ];
 
 const expenses = [
-  { date: "2026-02-03", description: "Workshop Materials", category: "Event Supplies", amount: 245.50 },
-  { date: "2026-02-01", description: "Poster Printing", category: "Marketing", amount: 89.00 },
-  { date: "2026-02-01", description: "Community Hall Deposit", category: "Venue", amount: 200.00 },
-  { date: "2026-01-02", description: "Volunteer T-Shirts", category: "Event Supplies", amount: 320.00 },
-  { date: "2026-02-05", description: "Social Media Ads", category: "Marketing", amount: 75.00 },
+  { date: "2025-11-03", description: "Workshop Materials", category: "Event Supplies", amount: 115.50 },
+  { date: "2025-10-01", description: "Poster Printing", category: "Marketing", amount: 47.00 },
+  { date: "2025-08-29", description: "Food and Drinks", category: "Event Supplies", amount: 220.00 },
+  { date: "", description: "Miscellaneous", category: "Marketing", amount: 75.00 },
 ];
 
 const fundingSources = [
-  { source: "Alzheimer Society Grant", amount: 1500.0, status: "Received", date: "2025-01-15" },
-  { source: "Community Foundation", amount: 800.0, status: "Received", date: "2025-01-20" },
-  { source: "Corporate Matching", amount: 500.0, status: "Pending", date: "2025-02-01" },
+  { source: "Makers Making Change Grant", amount: 3000.0, status: "Received", date: "2025-08-30" },
+  { source: "Workday", amount: 4000.0, status: "Received", date: "2025-09-20" },
+  { source: "Youth Creativity Fund", amount: 1000.0, status: "Pending", date: "2026-01-29" },
   { source: "Online Donations", amount: 336.0, status: "Ongoing", date: "" },
 ];
 
