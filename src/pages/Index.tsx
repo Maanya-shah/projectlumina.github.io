@@ -39,7 +39,7 @@ const Index = () => {
             </div>
             <p className="text-sm text-muted-foreground">
               Powered by{" "}
-              <span className="font-semibold text-foreground">Project Lumina</span>
+              <span className="font-semibold text-foreground">Workday</span>
             </p>
           </div>
         </div>
