@@ -12,14 +12,14 @@ interface Volunteer {
 }
 
 const mockVolunteers: Volunteer[] = [
-  { id: "1", name: "Tapas Udagani", email: "tapasudagani4@gmail.com", joinedDate: "2024-01-15", hoursLogged: 19.5 },
-  { id: "2", name: "Erika Chiu", email: "erikapychiu@gmail.com", joinedDate: "2024-02-01", hoursLogged: 39.5 },
-  { id: "3", name: "Christina To", email: "christina2to9@gmail.com", joinedDate: "2024-01-20", hoursLogged: 7 },
-  { id: "4", name: "Evan Yousufzai", email: "evanyousufzai455@gmail.com", joinedDate: "2024-03-05", hoursLogged: 8.5 },
-  { id: "5", name: "Eilin Aju", email: "eilinyahu07@gmail.com", joinedDate: "2024-02-15", hoursLogged: 26 },
-  { id: "6", name: "Alanna Javellana", email: "alannarjav@gmail.com", joinedDate: "2024-01-28", hoursLogged: 2.5 },
-  { id: "7", name: "Simone Quadros", email: "Sim1frames9@gmail.com", joinedDate: "2024-02-10", hoursLogged: 51 },
-  { id: "8", name: "Ethan Pimenta", email: "ethanpimenta@hotmail.com", joinedDate: "2024-03-01", hoursLogged: 5.5 },
+  { id: "1", name: "Tapas Udagani", email: "tapasudagani4@gmail.com", joinedDate: "2025-09-15", hoursLogged: 19.5 },
+  { id: "2", name: "Erika Chiu", email: "erikapychiu@gmail.com", joinedDate: "2025-09-12", hoursLogged: 39.5 },
+  { id: "3", name: "Christina To", email: "christina2to9@gmail.com", joinedDate: "2025-09-20", hoursLogged: 7 },
+  { id: "4", name: "Evan Yousufzai", email: "evanyousufzai455@gmail.com", joinedDate: "2025-10-05", hoursLogged: 8.5 },
+  { id: "5", name: "Eilin Aju", email: "eilinyahu07@gmail.com", joinedDate: "2025-11-14", hoursLogged: 26 },
+  { id: "6", name: "Alanna Javellana", email: "alannarjav@gmail.com", joinedDate: "2025-12-28", hoursLogged: 2.5 },
+  { id: "7", name: "Simone Quadros", email: "Sim1frames9@gmail.com", joinedDate: "2025-11-02", hoursLogged: 51 },
+  { id: "8", name: "Ethan Pimenta", email: "ethanpimenta@hotmail.com", joinedDate: "2026-02-07", hoursLogged: 5.5 },
 ];
 
 function getHoursBadgeClass(hours: number): string {
