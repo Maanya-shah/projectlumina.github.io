@@ -26,8 +26,8 @@ export function DashboardHeader({ activeTab, onTabChange }: DashboardHeaderProps
         <div className="flex items-center justify-between px-4 py-3 lg:px-6">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-accent">
-              <span className="text-lg font-bold text-accent-foreground">P</span>
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white">
+              <span className="text-lg font-bold text-primary">P</span>
             </div>
             <div className="hidden sm:block">
               <h1 className="text-lg font-bold tracking-tight">Project Lumina</h1>
