@@ -29,7 +29,8 @@ const recentSponsors = [
   "Level Up Math Academy",
   "Makers Making Change",
   "Kernels Popcorn",
-  "Local Credit Union",
+  "New India Sweets & Restaurant",
+  "Workday",
 ];
 
 const inKindDonations = [
@@ -40,11 +41,11 @@ const inKindDonations = [
 ];
 
 const expenses = [
-  { date: "2025-02-15", description: "Workshop Materials", category: "Event Supplies", amount: 245.50 },
-  { date: "2025-02-12", description: "Poster Printing", category: "Marketing", amount: 89.00 },
-  { date: "2025-02-10", description: "Community Hall Deposit", category: "Venue", amount: 200.00 },
-  { date: "2025-02-08", description: "Volunteer T-Shirts", category: "Event Supplies", amount: 320.00 },
-  { date: "2025-02-05", description: "Social Media Ads", category: "Marketing", amount: 75.00 },
+  { date: "2026-02-03", description: "Workshop Materials", category: "Event Supplies", amount: 245.50 },
+  { date: "2026-02-01", description: "Poster Printing", category: "Marketing", amount: 89.00 },
+  { date: "2026-02-01", description: "Community Hall Deposit", category: "Venue", amount: 200.00 },
+  { date: "2026-01-02", description: "Volunteer T-Shirts", category: "Event Supplies", amount: 320.00 },
+  { date: "2026-02-05", description: "Social Media Ads", category: "Marketing", amount: 75.00 },
 ];
 
 const fundingSources = [
