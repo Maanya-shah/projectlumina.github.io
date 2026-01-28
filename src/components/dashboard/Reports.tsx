@@ -19,10 +19,10 @@ import {
 const hoursOverTime = [
   { month: "Sep", hours: 45 },
   { month: "Oct", hours: 78 },
-  { month: "Nov", hours: 120 },
-  { month: "Dec", hours: 95 },
+  { month: "Nov", hours: 70 },
+  { month: "Dec", hours: 120 },
   { month: "Jan", hours: 156 },
-  { month: "Feb", hours: 189 },
+  { month: "Feb", hours: 40 },
 ];
 
 const volunteerEngagement = [
@@ -218,7 +218,7 @@ export function Reports() {
             </thead>
             <tbody className="divide-y divide-border">
               <tr className="hover:bg-muted/30 transition-colors">
-                <td className="py-3 font-medium text-foreground">February 2025</td>
+                <td className="py-3 font-medium text-foreground">February 2026</td>
                 <td className="py-3 text-right text-foreground">189</td>
                 <td className="py-3 text-right text-foreground">4</td>
                 <td className="py-3 text-right text-foreground">18</td>
@@ -226,7 +226,7 @@ export function Reports() {
                 <td className="py-3 text-right text-success font-medium">+21%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
-                <td className="py-3 font-medium text-foreground">January 2025</td>
+                <td className="py-3 font-medium text-foreground">January 2026</td>
                 <td className="py-3 text-right text-foreground">156</td>
                 <td className="py-3 text-right text-foreground">3</td>
                 <td className="py-3 text-right text-foreground">15</td>
@@ -234,7 +234,7 @@ export function Reports() {
                 <td className="py-3 text-right text-success font-medium">+18%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
-                <td className="py-3 font-medium text-foreground">December 2024</td>
+                <td className="py-3 font-medium text-foreground">December 2025</td>
                 <td className="py-3 text-right text-foreground">95</td>
                 <td className="py-3 text-right text-foreground">2</td>
                 <td className="py-3 text-right text-foreground">12</td>
@@ -242,7 +242,7 @@ export function Reports() {
                 <td className="py-3 text-right text-muted-foreground">-21%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
-                <td className="py-3 font-medium text-foreground">November 2024</td>
+                <td className="py-3 font-medium text-foreground">November 2025</td>
                 <td className="py-3 text-right text-foreground">120</td>
                 <td className="py-3 text-right text-foreground">3</td>
                 <td className="py-3 text-right text-foreground">14</td>
