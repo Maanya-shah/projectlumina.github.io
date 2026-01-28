@@ -48,7 +48,7 @@ const expenses = [
 
 const fundingSources = [
   { source: "Makers Making Change Grant", amount: 3000.0, status: "Received", date: "2025-08-30" },
-  { source: "Workday", amount: 4000.0, status: "Received", date: "2025-09-20" },
+  { source: "Workday", amount: 400.0, status: "Received", date: "2025-09-20" },
   { source: "Youth Creativity Fund", amount: 1000.0, status: "Pending", date: "2026-01-29" },
   { source: "Online Donations", amount: 336.0, status: "Ongoing", date: "" },
 ];
