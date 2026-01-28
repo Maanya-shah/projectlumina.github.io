@@ -13,7 +13,7 @@ const mockAnnouncements: Announcement[] = [
   {
     id: "1",
     title: "Assistive Tech Workshop Date Change",
-    content: "The Assistive Tech Workshop has been rescheduled to May 10th at 10:00 AM. Please update your calendars accordingly.",
+    content: "The Assistive Tech Workshop has been rescheduled to Feb 23rd at 2:30 PM. Please update your calendars accordingly.",
     timestamp: "2 hours ago",
     isNew: true,
   },
