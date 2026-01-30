@@ -223,7 +223,7 @@ export function Reports() {
                 <td className="py-3 text-right text-foreground">1</td>
                 <td className="py-3 text-right text-foreground">18</td>
                 <td className="py-3 text-right text-foreground">250</td>
-                <td className="py-3 text-right text-success font-medium">...</td>
+                <td className="py-3 text-right text-muted-foreground">...</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">January 2026</td>
@@ -239,7 +239,7 @@ export function Reports() {
                 <td className="py-3 text-right text-foreground">4</td>
                 <td className="py-3 text-right text-foreground">14</td>
                 <td className="py-3 text-right text-foreground">580</td>
-                <td className="py-3 text-right text-muted-foreground">+54%</td>
+                <td className="py-3 text-right text-success font-medium">+54%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">November 2025</td>

@@ -34,7 +34,7 @@ export function DashboardHeader({ activeTab, onTabChange }: DashboardHeaderProps
               <p className="text-xs text-primary-foreground/70">Alzheimer's Awareness Initiative</p>
             </div>
           </div>
-          
+           
           {/* Desktop Nav */}
           <nav className="hidden lg:flex lg:items-center lg:gap-1">
             {navItems.map((item) => (
