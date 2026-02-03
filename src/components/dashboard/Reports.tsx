@@ -119,7 +119,7 @@ export function Reports() {
         {/* Volunteer Engagement Distribution */}
         <div className="dashboard-section p-6">
           <h3 className="text-lg font-semibold text-foreground mb-4">Volunteer Engagement Distribution</h3>
-          <ResponsiveContainer width="90%" height={280}>
+          <ResponsiveContainer width="100%" height={280}>
             <PieChart>
               <Pie
                 data={volunteerEngagement}
