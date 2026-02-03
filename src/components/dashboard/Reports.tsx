@@ -221,7 +221,7 @@ export function Reports() {
                 <td className="py-3 font-medium text-foreground">February 2026</td>
                 <td className="py-3 text-right text-foreground">70</td>
                 <td className="py-3 text-right text-foreground">1</td>
-                <td className="py-3 text-right text-foreground">18</td>
+                <td className="py-3 text-right text-foreground">7</td>
                 <td className="py-3 text-right text-foreground">250</td>
                 <td className="py-3 text-right text-muted-foreground">...</td>
               </tr>
