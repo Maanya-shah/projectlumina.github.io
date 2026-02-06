@@ -25,45 +25,45 @@ const eventColors = {
 // February 2025 calendar with Monday meetings and workshop on 23rd
 const februaryCalendar: CalendarDay[] = [
   // Week 1 (Jan 26 - Feb 1)
+  { date: 25, events: [], isCurrentMonth: false },
   { date: 26, events: [], isCurrentMonth: false },
   { date: 27, events: [], isCurrentMonth: false },
   { date: 28, events: [], isCurrentMonth: false },
   { date: 29, events: [], isCurrentMonth: false },
   { date: 30, events: [], isCurrentMonth: false },
-  { date: 31, events: [], isCurrentMonth: false },
-  { date: 1, events: [], isCurrentMonth: true },
+  { date: 31, events: [], isCurrentMonth: true },
   // Week 2 (Feb 2 - Feb 8)
-  { date: 2, events: [], isCurrentMonth: true },
-  { date: 3, events: [{ id: "1", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 1, events: [], isCurrentMonth: true },
+  { date: 2, events: [{ id: "1", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 3, events: [], isCurrentMonth: true },
   { date: 4, events: [], isCurrentMonth: true },
-  { date: 5, events: [], isCurrentMonth: true },
-  { date: 6, events: [{ id: "2", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 5, events: [{ id: "2", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 6, events: [], isCurrentMonth: true },
   { date: 7, events: [], isCurrentMonth: true },
-  { date: 8, events: [], isCurrentMonth: true },
   // Week 3 (Feb 9 - Feb 15)
-  { date: 9, events: [], isCurrentMonth: true },
-  { date: 10, events: [{ id: "3", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 8, events: [], isCurrentMonth: true },
+  { date: 9, events: [{ id: "3", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 10, events: [], isCurrentMonth: true },
   { date: 11, events: [], isCurrentMonth: true },
-  { date: 12, events: [], isCurrentMonth: true },
-  { date: 13, events: [{ id: "4", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
-  { date: 14, events: [{ id: "5", title: "Volunteer Training", color: "purple" }], isCurrentMonth: true },
-  { date: 15, events: [], isCurrentMonth: true },
+  { date: 12, events: [{ id: "4", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 13, events: [{ id: "5", title: "Volunteer Training", color: "purple" }], isCurrentMonth: true },
+  { date: 14, events: [], isCurrentMonth: true },
   // Week 4 (Feb 16 - Feb 22)
-  { date: 16, events: [], isCurrentMonth: true },
-  { date: 17, events: [{ id: "6", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 15, events: [], isCurrentMonth: true },
+  { date: 16, events: [{ id: "6", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 17, events: [], isCurrentMonth: true },
   { date: 18, events: [], isCurrentMonth: true },
-  { date: 19, events: [], isCurrentMonth: true },
-  { date: 20, events: [{ id: "7", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 19, events: [{ id: "7", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 20, events: [], isCurrentMonth: true },
   { date: 21, events: [], isCurrentMonth: true },
-  { date: 22, events: [], isCurrentMonth: true },
   // Week 5 (Feb 23 - Mar 1)
-  { date: 23, events: [{ id: "8", title: "Alzheimer's Awareness Workshop", color: "orange" }], isCurrentMonth: true },
-  { date: 24, events: [{ id: "9", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 22, events: [{ id: "8", title: "Alzheimer's Awareness Workshop", color: "orange" }], isCurrentMonth: true },
+  { date: 23, events: [{ id: "9", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 24, events: [], isCurrentMonth: true },
   { date: 25, events: [], isCurrentMonth: true },
-  { date: 26, events: [], isCurrentMonth: true },
-  { date: 27, events: [{ id: "10", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
-  { date: 28, events: [], isCurrentMonth: true },
-  { date: 1, events: [], isCurrentMonth: false },
+  { date: 26, events: [{ id: "10", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 27, events: [], isCurrentMonth: true },
+  { date: 28, events: [], isCurrentMonth: false },
 ];
 
 const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
@@ -75,7 +75,7 @@ export function VolunteerSchedule() {
       <div className="dashboard-section">
         <div className="flex items-center justify-between p-4 border-b border-border">
           <div className="flex items-center gap-4">
-            <h2 className="text-xl font-semibold text-foreground">February 2025</h2>
+            <h2 className="text-xl font-semibold text-foreground">February 2026</h2>
             <div className="flex items-center gap-1">
               <Button variant="ghost" size="icon" className="h-8 w-8">
                 <ChevronLeft className="h-4 w-4" />
