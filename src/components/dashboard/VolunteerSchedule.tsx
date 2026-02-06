@@ -169,7 +169,7 @@ export function VolunteerSchedule() {
               </div>
               <div>
                 <p className="font-semibold text-foreground">Alzheimer's Awareness Workshop</p>
-                <p className="text-sm text-muted-foreground mt-1">Sunday, February 23, 2025</p>
+                <p className="text-sm text-muted-foreground mt-1">Sunday, February 22, 2025</p>
                 <p className="text-sm text-muted-foreground">10:00 AM - 2:00 PM • Community Center</p>
                 <div className="mt-2 flex gap-2">
                   <span className="badge-warning text-xs">12 Volunteers Needed</span>
