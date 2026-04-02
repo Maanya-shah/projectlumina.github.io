@@ -17,13 +17,14 @@ import {
 } from "recharts";
 
 const hoursOverTime = [
-  { month: "Sep", hours: 45 },
-  { month: "Oct", hours: 78 },
-  { month: "Nov", hours: 70 },
-  { month: "Dec", hours: 120 },
-  { month: "Jan", hours: 156 },
-  { month: "Feb", hours: 95 },
-  { month: "Mar", hours: 75 },
+  { month: "Sep", hours: 135 },
+  { month: "Oct", hours: 234 },
+  { month: "Nov", hours: 210 },
+  { month: "Dec", hours: 360 },
+  { month: "Jan", hours: 468 },
+  { month: "Feb", hours: 285 },
+  { month: "Mar", hours: 450 },
+  { month: "Apr", hours: 492 },
 ];
 
 const volunteerEngagement = [
