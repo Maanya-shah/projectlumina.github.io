@@ -34,11 +34,11 @@ const volunteerEngagement = [
 ];
 
 const eventPerformance = [
-  { event: "Holi Festival", volunteers: 25, hours: 80 },
-  { event: "Bake Sales", volunteers: 14, hours: 42 },
-  { event: "MMC Workshop", volunteers: 18, hours: 65 },
-  { event: "Color Run", volunteers: 30, hours: 90 },
-  { event: "Popcorn Sales", volunteers: 10, hours: 30 },
+  { event: "Holi Festival", volunteers: 75, hours: 240 },
+  { event: "Bake Sales", volunteers: 42, hours: 126 },
+  { event: "MMC Workshop", volunteers: 54, hours: 195 },
+  { event: "Color Run", volunteers: 90, hours: 270 },
+  { event: "Popcorn Sales", volunteers: 30, hours: 90 },
 ];
 
 const impactMetrics = [
