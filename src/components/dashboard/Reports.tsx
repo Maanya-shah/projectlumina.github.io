@@ -28,9 +28,9 @@ const hoursOverTime = [
 ];
 
 const volunteerEngagement = [
-  { name: "Active (30+ hrs)", value: 12, color: "hsl(142, 76%, 36%)" },
-  { name: "Moderate (10-30 hrs)", value: 35, color: "hsl(199, 89%, 48%)" },
-  { name: "New (<10 hrs)", value: 57, color: "hsl(45, 93%, 47%)" },
+  { name: "Active (30+ hrs)", value: 48, color: "hsl(142, 76%, 36%)" },
+  { name: "Moderate (10-30 hrs)", value: 140, color: "hsl(199, 89%, 48%)" },
+  { name: "New (<10 hrs)", value: 233, color: "hsl(45, 93%, 47%)" },
 ];
 
 const eventPerformance = [
