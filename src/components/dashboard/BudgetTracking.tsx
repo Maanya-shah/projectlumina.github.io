@@ -59,8 +59,8 @@ const fundingSources = [
   { source: "Workday Sponsorship", amount: 400.0, status: "Received", date: "2025-09-10" },
   { source: "Youth Creativity Fund", amount: 1000.0, status: "Received", date: "2026-02-15" },
   { source: "Level Up Math Academy", amount: 500.0, status: "Received", date: "2025-11-13" },
-  { source: "Online Donations", amount: 336.0, status: "Ongoing", date: "" },
-  { source: "COBS Bread Fundraiser", amount: 200.0, status: "Ongoing", date: "" },
+  { source: "Online Donations", amount: 3000.0, status: "Ongoing", date: "" },
+  { source: "COBS Bread Fundraiser", amount: 10000.0, status: "Ongoing", date: "" },
 ];
 
 export function BudgetTracking() {

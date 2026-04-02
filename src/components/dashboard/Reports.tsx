@@ -220,42 +220,50 @@ export function Reports() {
             </thead>
             <tbody className="divide-y divide-border">
               <tr className="hover:bg-muted/30 transition-colors">
+                <td className="py-3 font-medium text-foreground">April 2026</td>
+                <td className="py-3 text-right text-foreground">492</td>
+                <td className="py-3 text-right text-foreground">4</td>
+                <td className="py-3 text-right text-foreground">120</td>
+                <td className="py-3 text-right text-foreground">210</td>
+                <td className="py-3 text-right text-success font-medium">+9%</td>
+              </tr>
+              <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">March 2026</td>
-                <td className="py-3 text-right text-foreground">75</td>
-                <td className="py-3 text-right text-foreground">2</td>
-                <td className="py-3 text-right text-foreground">30</td>
+                <td className="py-3 text-right text-foreground">450</td>
+                <td className="py-3 text-right text-foreground">3</td>
+                <td className="py-3 text-right text-foreground">90</td>
                 <td className="py-3 text-right text-foreground">180</td>
-                <td className="py-3 text-right text-muted-foreground">—</td>
+                <td className="py-3 text-right text-success font-medium">+58%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">February 2026</td>
-                <td className="py-3 text-right text-foreground">95</td>
+                <td className="py-3 text-right text-foreground">285</td>
                 <td className="py-3 text-right text-foreground">3</td>
-                <td className="py-3 text-right text-foreground">22</td>
+                <td className="py-3 text-right text-foreground">66</td>
                 <td className="py-3 text-right text-foreground">150</td>
                 <td className="py-3 text-right text-success font-medium">+12%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">January 2026</td>
-                <td className="py-3 text-right text-foreground">156</td>
+                <td className="py-3 text-right text-foreground">468</td>
                 <td className="py-3 text-right text-foreground">4</td>
-                <td className="py-3 text-right text-foreground">15</td>
+                <td className="py-3 text-right text-foreground">45</td>
                 <td className="py-3 text-right text-foreground">120</td>
                 <td className="py-3 text-right text-success font-medium">+30%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">December 2025</td>
-                <td className="py-3 text-right text-foreground">120</td>
+                <td className="py-3 text-right text-foreground">360</td>
                 <td className="py-3 text-right text-foreground">4</td>
-                <td className="py-3 text-right text-foreground">14</td>
+                <td className="py-3 text-right text-foreground">42</td>
                 <td className="py-3 text-right text-foreground">95</td>
                 <td className="py-3 text-right text-success font-medium">+54%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">November 2025</td>
-                <td className="py-3 text-right text-foreground">70</td>
+                <td className="py-3 text-right text-foreground">210</td>
                 <td className="py-3 text-right text-foreground">3</td>
-                <td className="py-3 text-right text-foreground">8</td>
+                <td className="py-3 text-right text-foreground">24</td>
                 <td className="py-3 text-right text-foreground">65</td>
                 <td className="py-3 text-right text-success font-medium">+18%</td>
               </tr>

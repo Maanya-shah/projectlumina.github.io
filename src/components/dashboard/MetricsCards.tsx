@@ -62,19 +62,19 @@ export function MetricsCards() {
       <MetricCard
         icon={<Users className="h-6 w-6" />}
         label="Total Volunteers"
-        value={104}
+        value={421}
         delay={0}
       />
       <MetricCard
         icon={<Clock className="h-6 w-6" />}
         label="Total Hours Logged"
-        value={639}
+        value={2634}
         delay={100}
       />
       <MetricCard
         icon={<TrendingUp className="h-6 w-6" />}
         label="New Signups This Month"
-        value={21}
+        value={103}
         subtext="14 Pending"
         delay={200}
       />

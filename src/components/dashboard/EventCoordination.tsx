@@ -16,7 +16,7 @@ const mockEvents: Event[] = [
   {
     id: "1",
     name: "Memory Care Support Group",
-    date: "2025-02-15",
+    date: "2026-04-10",
     time: "1:00 PM - 3:00 PM",
     location: "Brampton Library",
     volunteersAssigned: 10,
@@ -26,7 +26,7 @@ const mockEvents: Event[] = [
   {
     id: "2",
     name: "Bake Sale Fundraiser",
-    date: "2026-03-04",
+    date: "2026-04-18",
     time: "9:00 AM - 1:00 PM",
     location: "Mississauga City Hall",
     volunteersAssigned: 5,
@@ -36,7 +36,7 @@ const mockEvents: Event[] = [
   {
     id: "3",
     name: "Seniors Gala Helper",
-    date: "2026-02-22",
+    date: "2026-04-25",
     time: "5:00 PM - 9:00 PM",
     location: "Bramlea Lions Hall Brampton",
     volunteersAssigned: 4,
