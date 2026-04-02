@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 interface CalendarEvent {
   id: string;
@@ -22,78 +24,141 @@ const eventColors = {
   teal: "bg-accent text-accent-foreground",
 };
 
-// February 2025 calendar with Monday meetings and workshop on 23rd
-const februaryCalendar: CalendarDay[] = [
-  // Week 1 (Jan 26 - Feb 1)
-  { date: 25, events: [], isCurrentMonth: false },
-  { date: 26, events: [], isCurrentMonth: false },
-  { date: 27, events: [], isCurrentMonth: false },
-  { date: 28, events: [], isCurrentMonth: false },
-  { date: 29, events: [], isCurrentMonth: false },
-  { date: 30, events: [], isCurrentMonth: false },
-  { date: 31, events: [], isCurrentMonth: true },
-  // Week 2 (Feb 2 - Feb 8)
+// March 2026 calendar
+const marchCalendar: CalendarDay[] = [
+  // Week 1 (Mar 1)
   { date: 1, events: [], isCurrentMonth: true },
-  { date: 2, events: [{ id: "1", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 2, events: [{ id: "m1", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
   { date: 3, events: [], isCurrentMonth: true },
   { date: 4, events: [], isCurrentMonth: true },
-  { date: 5, events: [{ id: "2", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 5, events: [{ id: "m2", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
   { date: 6, events: [], isCurrentMonth: true },
-  { date: 7, events: [], isCurrentMonth: true },
-  // Week 3 (Feb 9 - Feb 15)
+  { date: 7, events: [{ id: "m3", title: "COBS Bread Fundraiser", color: "orange" }], isCurrentMonth: true },
+  // Week 2
   { date: 8, events: [], isCurrentMonth: true },
-  { date: 9, events: [{ id: "3", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 9, events: [{ id: "m4", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
   { date: 10, events: [], isCurrentMonth: true },
   { date: 11, events: [], isCurrentMonth: true },
-  { date: 12, events: [{ id: "4", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
-  { date: 13, events: [{ id: "5", title: "Volunteer Training", color: "purple" }], isCurrentMonth: true },
+  { date: 12, events: [{ id: "m5", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 13, events: [], isCurrentMonth: true },
   { date: 14, events: [], isCurrentMonth: true },
-  // Week 4 (Feb 16 - Feb 22)
+  // Week 3
   { date: 15, events: [], isCurrentMonth: true },
-  { date: 16, events: [{ id: "6", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 16, events: [{ id: "m6", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
   { date: 17, events: [], isCurrentMonth: true },
   { date: 18, events: [], isCurrentMonth: true },
-  { date: 19, events: [{ id: "7", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 19, events: [{ id: "m7", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
   { date: 20, events: [], isCurrentMonth: true },
   { date: 21, events: [], isCurrentMonth: true },
-  // Week 5 (Feb 23 - Mar 1)
-  { date: 22, events: [{ id: "8", title: "Alzheimer's Awareness Workshop", color: "orange" }], isCurrentMonth: true },
-  { date: 23, events: [{ id: "9", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  // Week 4
+  { date: 22, events: [], isCurrentMonth: true },
+  { date: 23, events: [{ id: "m8", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 24, events: [{ id: "m9", title: "Color Run Fundraising Event", color: "orange" }], isCurrentMonth: true },
+  { date: 25, events: [], isCurrentMonth: true },
+  { date: 26, events: [{ id: "m10", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 27, events: [], isCurrentMonth: true },
+  { date: 28, events: [], isCurrentMonth: true },
+  // Week 5
+  { date: 29, events: [], isCurrentMonth: true },
+  { date: 30, events: [{ id: "m11", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 31, events: [], isCurrentMonth: true },
+  { date: 1, events: [], isCurrentMonth: false },
+  { date: 2, events: [], isCurrentMonth: false },
+  { date: 3, events: [], isCurrentMonth: false },
+  { date: 4, events: [], isCurrentMonth: false },
+];
+
+// April 2026 calendar
+const aprilCalendar: CalendarDay[] = [
+  // Week 1
+  { date: 29, events: [], isCurrentMonth: false },
+  { date: 30, events: [], isCurrentMonth: false },
+  { date: 31, events: [], isCurrentMonth: false },
+  { date: 1, events: [], isCurrentMonth: true },
+  { date: 2, events: [{ id: "a1", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 3, events: [], isCurrentMonth: true },
+  { date: 4, events: [], isCurrentMonth: true },
+  // Week 2
+  { date: 5, events: [], isCurrentMonth: true },
+  { date: 6, events: [{ id: "a2", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 7, events: [], isCurrentMonth: true },
+  { date: 8, events: [], isCurrentMonth: true },
+  { date: 9, events: [{ id: "a3", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 10, events: [], isCurrentMonth: true },
+  { date: 11, events: [], isCurrentMonth: true },
+  // Week 3
+  { date: 12, events: [], isCurrentMonth: true },
+  { date: 13, events: [{ id: "a4", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 14, events: [], isCurrentMonth: true },
+  { date: 15, events: [], isCurrentMonth: true },
+  { date: 16, events: [{ id: "a5", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 17, events: [], isCurrentMonth: true },
+  { date: 18, events: [], isCurrentMonth: true },
+  // Week 4
+  { date: 19, events: [], isCurrentMonth: true },
+  { date: 20, events: [{ id: "a6", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 21, events: [], isCurrentMonth: true },
+  { date: 22, events: [], isCurrentMonth: true },
+  { date: 23, events: [{ id: "a7", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
   { date: 24, events: [], isCurrentMonth: true },
   { date: 25, events: [], isCurrentMonth: true },
-  { date: 26, events: [{ id: "10", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
-  { date: 27, events: [], isCurrentMonth: true },
-  { date: 28, events: [], isCurrentMonth: false },
+  // Week 5
+  { date: 26, events: [], isCurrentMonth: true },
+  { date: 27, events: [{ id: "a8", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 28, events: [{ id: "a9", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 29, events: [], isCurrentMonth: true },
+  { date: 30, events: [{ id: "a10", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 1, events: [], isCurrentMonth: false },
+  { date: 2, events: [], isCurrentMonth: false },
+];
+
+const months = [
+  { label: "March 2026", calendar: marchCalendar },
+  { label: "April 2026", calendar: aprilCalendar },
 ];
 
 const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
 export function VolunteerSchedule() {
+  const [monthIndex, setMonthIndex] = useState(0);
+  const currentMonth = months[monthIndex];
+
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Calendar Header */}
       <div className="dashboard-section">
         <div className="flex items-center justify-between p-4 border-b border-border">
           <div className="flex items-center gap-4">
-            <h2 className="text-xl font-semibold text-foreground">February 2026</h2>
+            <h2 className="text-xl font-semibold text-foreground">{currentMonth.label}</h2>
             <div className="flex items-center gap-1">
-              <Button variant="ghost" size="icon" className="h-8 w-8">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8"
+                onClick={() => setMonthIndex((i) => Math.max(0, i - 1))}
+                disabled={monthIndex === 0}
+              >
                 <ChevronLeft className="h-4 w-4" />
               </Button>
-              <Button variant="ghost" size="icon" className="h-8 w-8">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="h-8 w-8"
+                onClick={() => setMonthIndex((i) => Math.min(months.length - 1, i + 1))}
+                disabled={monthIndex === months.length - 1}
+              >
                 <ChevronRight className="h-4 w-4" />
               </Button>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm">Today</Button>
+            <Button variant="outline" size="sm" onClick={() => setMonthIndex(0)}>Today</Button>
             <Button variant="default" size="sm">+ Add Event</Button>
           </div>
         </div>
 
         {/* Calendar Grid */}
         <div className="overflow-x-auto">
-          {/* Week Days Header */}
           <div className="grid grid-cols-7 border-b border-border">
             {weekDays.map((day) => (
               <div
@@ -105,19 +170,20 @@ export function VolunteerSchedule() {
             ))}
           </div>
 
-          {/* Calendar Days */}
           <div className="grid grid-cols-7">
-            {februaryCalendar.map((day, index) => (
+            {currentMonth.calendar.map((day, index) => (
               <div
                 key={index}
-                className={`min-h-[100px] p-2 border-r border-b border-border last:border-r-0 ${
+                className={cn(
+                  "min-h-[100px] p-2 border-r border-b border-border last:border-r-0",
                   !day.isCurrentMonth ? "bg-muted/30" : "bg-background"
-                }`}
+                )}
               >
                 <span
-                  className={`text-sm font-medium ${
+                  className={cn(
+                    "text-sm font-medium",
                     !day.isCurrentMonth ? "text-muted-foreground/50" : "text-foreground"
-                  }`}
+                  )}
                 >
                   {day.date}
                 </span>
@@ -125,7 +191,10 @@ export function VolunteerSchedule() {
                   {day.events.map((event) => (
                     <div
                       key={event.id}
-                      className={`text-xs px-2 py-1 rounded truncate cursor-pointer hover:opacity-80 transition-opacity ${eventColors[event.color]}`}
+                      className={cn(
+                        "text-xs px-2 py-1 rounded truncate cursor-pointer hover:opacity-80 transition-opacity",
+                        eventColors[event.color]
+                      )}
                       title={event.title}
                     >
                       {event.title}
@@ -161,18 +230,18 @@ export function VolunteerSchedule() {
         </div>
 
         <div className="dashboard-section p-4">
-          <h3 className="text-lg font-semibold text-foreground mb-4">Upcoming Workshop</h3>
+          <h3 className="text-lg font-semibold text-foreground mb-4">Upcoming Event</h3>
           <div className="p-4 rounded-lg bg-warning/10 border border-warning/20">
             <div className="flex items-start gap-3">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-warning text-warning-foreground font-bold">
-                23
+                30
               </div>
               <div>
-                <p className="font-semibold text-foreground">Alzheimer's Awareness Workshop</p>
-                <p className="text-sm text-muted-foreground mt-1">Sunday, February 22, 2025</p>
-                <p className="text-sm text-muted-foreground">10:00 AM - 2:00 PM • Community Center</p>
+                <p className="font-semibold text-foreground">Walk for Alzheimer's</p>
+                <p className="text-sm text-muted-foreground mt-1">Saturday, May 30, 2026</p>
+                <p className="text-sm text-muted-foreground">9:00 AM - 1:00 PM • Community Center</p>
                 <div className="mt-2 flex gap-2">
-                  <span className="badge-warning text-xs">12 Volunteers Needed</span>
+                  <span className="badge-warning text-xs">Volunteers Needed</span>
                 </div>
               </div>
             </div>
@@ -194,7 +263,7 @@ export function VolunteerSchedule() {
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded bg-warning" />
-            <span className="text-sm text-foreground">Workshops</span>
+            <span className="text-sm text-foreground">Events & Fundraisers</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded bg-primary" />

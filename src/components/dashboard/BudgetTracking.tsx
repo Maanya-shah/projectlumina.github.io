@@ -12,24 +12,29 @@ const budgetTabs: { id: BudgetTab; label: string }[] = [
 ];
 
 const financialAccounts = [
-  { label: "Event Budget Balance", amount: 1120.0, color: "text-info" },
-  { label: "Grants Received", amount: 3000.0, color: "text-info" },
+  { label: "Event Budget Balance", amount: 1249.0, color: "text-info" },
+  { label: "Grants Received", amount: 1115.0, color: "text-info" },
   { label: "Donations & Sponsorships", amount: 772.0, color: "text-info" },
-  { label: "Total Funds Available", amount: 2723.0, color: "text-info font-bold" },
+  { label: "Total Funds Available", amount: 3136.0, color: "text-info font-bold" },
 ];
 
 const budgetAllocation = [
-  { category: "Event Supplies", projected: 720.0, actual: 162.0, variance: 558.0 },
-  { category: "Marketing Materials", projected: 100.0, actual: 45.50, variance: 55.0 },
-  { category: "Dashboard Costs", projected: 400.0, actual: 0.0, variance: 400.0 },
+  { category: "STFX Holi Event", projected: 500.0, actual: 162.0, variance: 338.0 },
+  { category: "Bake Sales", projected: 40.0, actual: 0.0, variance: 40.0 },
+  { category: "Assistive Tech Workshops", projected: 700.0, actual: 0.0, variance: 700.0 },
+  { category: "Volunteer Dashboard", projected: 400.0, actual: 0.0, variance: 400.0 },
+  { category: "Color Run Event", projected: 1500.0, actual: 540.0, variance: 960.0 },
 ];
 
 const recentSponsors = [
   "Level Up Math Academy",
-  "Makers Making Change",
-  "Kernels Popcorn",
+  "Kernels",
   "New India Sweets & Restaurant",
+  "Makers Making Change",
   "Workday",
+  "COBS Bread",
+  "Dairy Queen",
+  "Costco",
 ];
 
 const inKindDonations = [
@@ -40,17 +45,22 @@ const inKindDonations = [
 ];
 
 const expenses = [
-  { date: "2025-11-03", description: "Workshop Materials", category: "Event Supplies", amount: 115.50 },
-  { date: "2025-10-01", description: "Poster Printing", category: "Marketing", amount: 47.00 },
-  { date: "2025-08-29", description: "Food and Drinks", category: "Event Supplies", amount: 220.00 },
-  { date: "", description: "Miscellaneous", category: "Marketing", amount: 75.00 },
+  { date: "2026-03-24", description: "Color Run Supplies", category: "Event Supplies", amount: 540.0 },
+  { date: "2026-02-26", description: "Workshop Materials (MMC Workshop #2)", category: "Event Supplies", amount: 455.0 },
+  { date: "2026-02-17", description: "Bake Sale Supplies", category: "Event Supplies", amount: 18.30 },
+  { date: "2025-12-09", description: "Bake Sale Materials (Christmas Market)", category: "Event Supplies", amount: 0.0 },
+  { date: "2025-11-06", description: "Workshop Materials (MMC Workshop #1)", category: "Event Supplies", amount: 115.0 },
+  { date: "2025-09-21", description: "Holi Festival Supplies", category: "Event Supplies", amount: 162.0 },
+  { date: "2025-10-01", description: "Poster Printing", category: "Marketing", amount: 47.0 },
 ];
 
 const fundingSources = [
-  { source: "Makers Making Change Grant", amount: 3000.0, status: "Received", date: "2025-08-30" },
-  { source: "Workday", amount: 400.0, status: "Received", date: "2025-09-20" },
-  { source: "Youth Creativity Fund", amount: 1000.0, status: "Pending", date: "2026-01-29" },
+  { source: "Makers Making Change Grant", amount: 3000.0, status: "Received", date: "2025-09-10" },
+  { source: "Workday Sponsorship", amount: 400.0, status: "Received", date: "2025-09-10" },
+  { source: "Youth Creativity Fund", amount: 1000.0, status: "Received", date: "2026-02-15" },
+  { source: "Level Up Math Academy", amount: 500.0, status: "Received", date: "2025-11-13" },
   { source: "Online Donations", amount: 336.0, status: "Ongoing", date: "" },
+  { source: "COBS Bread Fundraiser", amount: 200.0, status: "Ongoing", date: "" },
 ];
 
 export function BudgetTracking() {
@@ -150,6 +160,12 @@ export function BudgetTracking() {
                       </td>
                     </tr>
                   ))}
+                  <tr className="hover:bg-muted/30 transition-colors font-bold border-t-2 border-border">
+                    <td className="py-3 text-foreground">Total</td>
+                    <td className="py-3 text-right text-foreground">$3,140.00</td>
+                    <td className="py-3 text-right text-foreground">$702.00</td>
+                    <td className="py-3 text-right text-success">$2,438.00</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -203,11 +219,13 @@ export function BudgetTracking() {
                 {expenses.map((expense, index) => (
                   <tr key={index} className="hover:bg-muted/30 transition-colors">
                     <td className="py-3 text-muted-foreground text-sm">
-                      {new Date(expense.date).toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
+                      {expense.date
+                        ? new Date(expense.date).toLocaleDateString("en-US", {
+                            month: "short",
+                            day: "numeric",
+                            year: "numeric",
+                          })
+                        : "—"}
                     </td>
                     <td className="py-3 text-foreground">{expense.description}</td>
                     <td className="py-3">
