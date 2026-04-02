@@ -17,33 +17,34 @@ import {
 } from "recharts";
 
 const hoursOverTime = [
-  { month: "Sep", hours: 45 },
-  { month: "Oct", hours: 78 },
-  { month: "Nov", hours: 70 },
-  { month: "Dec", hours: 120 },
-  { month: "Jan", hours: 156 },
-  { month: "Feb", hours: 95 },
-  { month: "Mar", hours: 75 },
+  { month: "Sep", hours: 135 },
+  { month: "Oct", hours: 234 },
+  { month: "Nov", hours: 210 },
+  { month: "Dec", hours: 360 },
+  { month: "Jan", hours: 468 },
+  { month: "Feb", hours: 285 },
+  { month: "Mar", hours: 450 },
+  { month: "Apr", hours: 492 },
 ];
 
 const volunteerEngagement = [
-  { name: "Active (30+ hrs)", value: 12, color: "hsl(142, 76%, 36%)" },
-  { name: "Moderate (10-30 hrs)", value: 35, color: "hsl(199, 89%, 48%)" },
-  { name: "New (<10 hrs)", value: 57, color: "hsl(45, 93%, 47%)" },
+  { name: "Active (30+ hrs)", value: 48, color: "hsl(142, 76%, 36%)" },
+  { name: "Moderate (10-30 hrs)", value: 140, color: "hsl(199, 89%, 48%)" },
+  { name: "New (<10 hrs)", value: 233, color: "hsl(45, 93%, 47%)" },
 ];
 
 const eventPerformance = [
-  { event: "Holi Festival", volunteers: 25, hours: 80 },
-  { event: "Bake Sales", volunteers: 14, hours: 42 },
-  { event: "MMC Workshop", volunteers: 18, hours: 65 },
-  { event: "Color Run", volunteers: 30, hours: 90 },
-  { event: "Popcorn Sales", volunteers: 10, hours: 30 },
+  { event: "Holi Festival", volunteers: 75, hours: 240 },
+  { event: "Bake Sales", volunteers: 42, hours: 126 },
+  { event: "MMC Workshop", volunteers: 54, hours: 195 },
+  { event: "Color Run", volunteers: 90, hours: 270 },
+  { event: "Popcorn Sales", volunteers: 30, hours: 90 },
 ];
 
 const impactMetrics = [
-  { label: "Total Volunteer Hours", value: "639", change: "+21%", icon: Clock },
-  { label: "Active Volunteers", value: "104", change: "+15", icon: Users },
-  { label: "Events Completed", value: "12", change: "+4", icon: Calendar },
+  { label: "Total Volunteer Hours", value: "2,634", change: "+21%", icon: Clock },
+  { label: "Active Volunteers", value: "421", change: "+103", icon: Users },
+  { label: "Events Completed", value: "21", change: "+4", icon: Calendar },
   { label: "Community Engagements", value: "850+", change: "+32%", icon: TrendingUp },
 ];
 
@@ -219,42 +220,50 @@ export function Reports() {
             </thead>
             <tbody className="divide-y divide-border">
               <tr className="hover:bg-muted/30 transition-colors">
+                <td className="py-3 font-medium text-foreground">April 2026</td>
+                <td className="py-3 text-right text-foreground">492</td>
+                <td className="py-3 text-right text-foreground">4</td>
+                <td className="py-3 text-right text-foreground">120</td>
+                <td className="py-3 text-right text-foreground">210</td>
+                <td className="py-3 text-right text-success font-medium">+9%</td>
+              </tr>
+              <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">March 2026</td>
-                <td className="py-3 text-right text-foreground">75</td>
-                <td className="py-3 text-right text-foreground">2</td>
-                <td className="py-3 text-right text-foreground">30</td>
+                <td className="py-3 text-right text-foreground">450</td>
+                <td className="py-3 text-right text-foreground">3</td>
+                <td className="py-3 text-right text-foreground">90</td>
                 <td className="py-3 text-right text-foreground">180</td>
-                <td className="py-3 text-right text-muted-foreground">—</td>
+                <td className="py-3 text-right text-success font-medium">+58%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">February 2026</td>
-                <td className="py-3 text-right text-foreground">95</td>
+                <td className="py-3 text-right text-foreground">285</td>
                 <td className="py-3 text-right text-foreground">3</td>
-                <td className="py-3 text-right text-foreground">22</td>
+                <td className="py-3 text-right text-foreground">66</td>
                 <td className="py-3 text-right text-foreground">150</td>
                 <td className="py-3 text-right text-success font-medium">+12%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">January 2026</td>
-                <td className="py-3 text-right text-foreground">156</td>
+                <td className="py-3 text-right text-foreground">468</td>
                 <td className="py-3 text-right text-foreground">4</td>
-                <td className="py-3 text-right text-foreground">15</td>
+                <td className="py-3 text-right text-foreground">45</td>
                 <td className="py-3 text-right text-foreground">120</td>
                 <td className="py-3 text-right text-success font-medium">+30%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">December 2025</td>
-                <td className="py-3 text-right text-foreground">120</td>
+                <td className="py-3 text-right text-foreground">360</td>
                 <td className="py-3 text-right text-foreground">4</td>
-                <td className="py-3 text-right text-foreground">14</td>
+                <td className="py-3 text-right text-foreground">42</td>
                 <td className="py-3 text-right text-foreground">95</td>
                 <td className="py-3 text-right text-success font-medium">+54%</td>
               </tr>
               <tr className="hover:bg-muted/30 transition-colors">
                 <td className="py-3 font-medium text-foreground">November 2025</td>
-                <td className="py-3 text-right text-foreground">70</td>
+                <td className="py-3 text-right text-foreground">210</td>
                 <td className="py-3 text-right text-foreground">3</td>
-                <td className="py-3 text-right text-foreground">8</td>
+                <td className="py-3 text-right text-foreground">24</td>
                 <td className="py-3 text-right text-foreground">65</td>
                 <td className="py-3 text-right text-success font-medium">+18%</td>
               </tr>

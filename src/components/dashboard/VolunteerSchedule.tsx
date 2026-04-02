@@ -24,90 +24,90 @@ const eventColors = {
   teal: "bg-accent text-accent-foreground",
 };
 
-// March 2026 calendar
+// March 2026 calendar (Sun start)
 const marchCalendar: CalendarDay[] = [
-  // Week 1 (Mar 1)
+  // Week 1 (Mar 1 is Sunday)
   { date: 1, events: [], isCurrentMonth: true },
   { date: 2, events: [{ id: "m1", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
-  { date: 3, events: [], isCurrentMonth: true },
+  { date: 3, events: [{ id: "mp1", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 4, events: [], isCurrentMonth: true },
-  { date: 5, events: [{ id: "m2", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 5, events: [{ id: "m2", title: "Admin Meeting", color: "green" }, { id: "mp2", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 6, events: [], isCurrentMonth: true },
   { date: 7, events: [{ id: "m3", title: "COBS Bread Fundraiser", color: "orange" }], isCurrentMonth: true },
   // Week 2
   { date: 8, events: [], isCurrentMonth: true },
   { date: 9, events: [{ id: "m4", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
-  { date: 10, events: [], isCurrentMonth: true },
+  { date: 10, events: [{ id: "mp3", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 11, events: [], isCurrentMonth: true },
-  { date: 12, events: [{ id: "m5", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 12, events: [{ id: "m5", title: "Admin Meeting", color: "green" }, { id: "mp4", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 13, events: [], isCurrentMonth: true },
   { date: 14, events: [], isCurrentMonth: true },
   // Week 3
   { date: 15, events: [], isCurrentMonth: true },
   { date: 16, events: [{ id: "m6", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
-  { date: 17, events: [], isCurrentMonth: true },
+  { date: 17, events: [{ id: "mp5", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 18, events: [], isCurrentMonth: true },
-  { date: 19, events: [{ id: "m7", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 19, events: [{ id: "m7", title: "Admin Meeting", color: "green" }, { id: "mp6", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 20, events: [], isCurrentMonth: true },
   { date: 21, events: [], isCurrentMonth: true },
   // Week 4
   { date: 22, events: [], isCurrentMonth: true },
   { date: 23, events: [{ id: "m8", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
-  { date: 24, events: [{ id: "m9", title: "Color Run Fundraising Event", color: "orange" }], isCurrentMonth: true },
+  { date: 24, events: [{ id: "m9", title: "Color Run Fundraising Event", color: "orange" }, { id: "mp7", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 25, events: [], isCurrentMonth: true },
-  { date: 26, events: [{ id: "m10", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 26, events: [{ id: "m10", title: "Admin Meeting", color: "green" }, { id: "mp8", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 27, events: [], isCurrentMonth: true },
   { date: 28, events: [], isCurrentMonth: true },
   // Week 5
   { date: 29, events: [], isCurrentMonth: true },
   { date: 30, events: [{ id: "m11", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
-  { date: 31, events: [], isCurrentMonth: true },
+  { date: 31, events: [{ id: "mp9", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 1, events: [], isCurrentMonth: false },
   { date: 2, events: [], isCurrentMonth: false },
   { date: 3, events: [], isCurrentMonth: false },
   { date: 4, events: [], isCurrentMonth: false },
 ];
 
-// April 2026 calendar
+// April 2026 calendar (Wed start)
 const aprilCalendar: CalendarDay[] = [
   // Week 1
   { date: 29, events: [], isCurrentMonth: false },
   { date: 30, events: [], isCurrentMonth: false },
   { date: 31, events: [], isCurrentMonth: false },
   { date: 1, events: [], isCurrentMonth: true },
-  { date: 2, events: [{ id: "a1", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 2, events: [{ id: "a1", title: "Admin Meeting", color: "green" }, { id: "ap1", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 3, events: [], isCurrentMonth: true },
   { date: 4, events: [], isCurrentMonth: true },
   // Week 2
   { date: 5, events: [], isCurrentMonth: true },
   { date: 6, events: [{ id: "a2", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
-  { date: 7, events: [], isCurrentMonth: true },
+  { date: 7, events: [{ id: "ap2", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 8, events: [], isCurrentMonth: true },
-  { date: 9, events: [{ id: "a3", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 9, events: [{ id: "a3", title: "Admin Meeting", color: "green" }, { id: "ap3", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 10, events: [], isCurrentMonth: true },
   { date: 11, events: [], isCurrentMonth: true },
   // Week 3
   { date: 12, events: [], isCurrentMonth: true },
   { date: 13, events: [{ id: "a4", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
-  { date: 14, events: [], isCurrentMonth: true },
+  { date: 14, events: [{ id: "ap4", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 15, events: [], isCurrentMonth: true },
-  { date: 16, events: [{ id: "a5", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 16, events: [{ id: "a5", title: "Admin Meeting", color: "green" }, { id: "ap5", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 17, events: [], isCurrentMonth: true },
   { date: 18, events: [], isCurrentMonth: true },
   // Week 4
   { date: 19, events: [], isCurrentMonth: true },
   { date: 20, events: [{ id: "a6", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
-  { date: 21, events: [], isCurrentMonth: true },
+  { date: 21, events: [{ id: "ap6", title: "Popcorn Sales", color: "orange" }, { id: "a11", title: "Assistive Tech Workshop", color: "purple" }], isCurrentMonth: true },
   { date: 22, events: [], isCurrentMonth: true },
-  { date: 23, events: [{ id: "a7", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 23, events: [{ id: "a7", title: "Admin Meeting", color: "green" }, { id: "ap7", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 24, events: [], isCurrentMonth: true },
   { date: 25, events: [], isCurrentMonth: true },
   // Week 5
   { date: 26, events: [], isCurrentMonth: true },
   { date: 27, events: [{ id: "a8", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
-  { date: 28, events: [{ id: "a9", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 28, events: [{ id: "ap8", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 29, events: [], isCurrentMonth: true },
-  { date: 30, events: [{ id: "a10", title: "Admin Meeting", color: "green" }], isCurrentMonth: true },
+  { date: 30, events: [{ id: "a10", title: "Admin Meeting", color: "green" }, { id: "ap9", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
   { date: 1, events: [], isCurrentMonth: false },
   { date: 2, events: [], isCurrentMonth: false },
 ];
