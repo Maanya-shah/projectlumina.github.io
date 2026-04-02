@@ -41,9 +41,9 @@ const eventPerformance = [
 ];
 
 const impactMetrics = [
-  { label: "Total Volunteer Hours", value: "639", change: "+21%", icon: Clock },
-  { label: "Active Volunteers", value: "104", change: "+15", icon: Users },
-  { label: "Events Completed", value: "12", change: "+4", icon: Calendar },
+  { label: "Total Volunteer Hours", value: "2,634", change: "+21%", icon: Clock },
+  { label: "Active Volunteers", value: "421", change: "+103", icon: Users },
+  { label: "Events Completed", value: "21", change: "+4", icon: Calendar },
   { label: "Community Engagements", value: "850+", change: "+32%", icon: TrendingUp },
 ];
 
