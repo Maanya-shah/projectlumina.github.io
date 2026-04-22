@@ -112,9 +112,62 @@ const aprilCalendar: CalendarDay[] = [
   { date: 2, events: [], isCurrentMonth: false },
 ];
 
+// May 2026 calendar (Fri start)
+const mayCalendar: CalendarDay[] = [
+  // Week 1
+  { date: 26, events: [], isCurrentMonth: false },
+  { date: 27, events: [], isCurrentMonth: false },
+  { date: 28, events: [], isCurrentMonth: false },
+  { date: 29, events: [], isCurrentMonth: false },
+  { date: 30, events: [], isCurrentMonth: false },
+  { date: 1, events: [], isCurrentMonth: true },
+  { date: 2, events: [], isCurrentMonth: true },
+  // Week 2
+  { date: 3, events: [], isCurrentMonth: true },
+  { date: 4, events: [{ id: "my1", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 5, events: [{ id: "myp1", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 6, events: [], isCurrentMonth: true },
+  { date: 7, events: [{ id: "my2", title: "Admin Meeting", color: "green" }, { id: "myp2", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 8, events: [{ id: "my3", title: "Memory Care Support Group", color: "purple" }], isCurrentMonth: true },
+  { date: 9, events: [], isCurrentMonth: true },
+  // Week 3
+  { date: 10, events: [], isCurrentMonth: true },
+  { date: 11, events: [{ id: "my4", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 12, events: [{ id: "myp3", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 13, events: [], isCurrentMonth: true },
+  { date: 14, events: [{ id: "my5", title: "Admin Meeting", color: "green" }, { id: "myp4", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 15, events: [], isCurrentMonth: true },
+  { date: 16, events: [{ id: "my6", title: "Bake Sale Fundraiser", color: "orange" }], isCurrentMonth: true },
+  // Week 4
+  { date: 17, events: [], isCurrentMonth: true },
+  { date: 18, events: [{ id: "my7", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 19, events: [{ id: "myp5", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 20, events: [], isCurrentMonth: true },
+  { date: 21, events: [{ id: "my8", title: "Admin Meeting", color: "green" }, { id: "myp6", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 22, events: [{ id: "my9", title: "Seniors Gala Helper", color: "purple" }], isCurrentMonth: true },
+  { date: 23, events: [], isCurrentMonth: true },
+  // Week 5
+  { date: 24, events: [], isCurrentMonth: true },
+  { date: 25, events: [{ id: "my10", title: "Weekly Team Meeting", color: "blue" }], isCurrentMonth: true },
+  { date: 26, events: [{ id: "myp7", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 27, events: [], isCurrentMonth: true },
+  { date: 28, events: [{ id: "my11", title: "Admin Meeting", color: "green" }, { id: "myp8", title: "Popcorn Sales", color: "orange" }], isCurrentMonth: true },
+  { date: 29, events: [], isCurrentMonth: true },
+  { date: 30, events: [{ id: "my12", title: "Walk for Alzheimer's", color: "red" }], isCurrentMonth: true },
+  // Week 6
+  { date: 31, events: [], isCurrentMonth: true },
+  { date: 1, events: [], isCurrentMonth: false },
+  { date: 2, events: [], isCurrentMonth: false },
+  { date: 3, events: [], isCurrentMonth: false },
+  { date: 4, events: [], isCurrentMonth: false },
+  { date: 5, events: [], isCurrentMonth: false },
+  { date: 6, events: [], isCurrentMonth: false },
+];
+
 const months = [
   { label: "March 2026", calendar: marchCalendar },
   { label: "April 2026", calendar: aprilCalendar },
+  { label: "May 2026", calendar: mayCalendar },
 ];
 
 const weekDays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
