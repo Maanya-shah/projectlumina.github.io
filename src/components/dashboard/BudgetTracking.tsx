@@ -66,8 +66,8 @@ const fundingSources = [
 export function BudgetTracking() {
   const [activeTab, setActiveTab] = useState<BudgetTab>("summary");
 
-  const fundingGoal = 3000;
-  const amountRaised = 2500;
+  const fundingGoal = 25000;
+  const amountRaised = 23819;
   const progressPercent = (amountRaised / fundingGoal) * 100;
 
   return (
